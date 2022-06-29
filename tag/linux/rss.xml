@@ -10,138 +10,6 @@
         <category>linux</category>
         <category>vim</category>
         <item>
-            <guid isPermalink="true">https://li-holmes.cn/2022/06/29/vim%E6%94%BE%E5%BC%83/</guid>
-            <title>vim从入门到放弃--放弃篇</title>
-            <link>https://li-holmes.cn/2022/06/29/vim%E6%94%BE%E5%BC%83/</link>
-            <category>linux</category>
-            <category>vim</category>
-            <pubDate>Wed, 29 Jun 2022 16:51:00 +0800</pubDate>
-            <description><![CDATA[ &lt;p&gt;​	本文介绍了 vim 的永久设置样式，如何在 vim 中执行 linux 命令，vim 宏运用以及可视化模式。&lt;/p&gt;
-&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
-&lt;h2 id=&#34;virc-和-vimrc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#virc-和-vimrc&#34;&gt;#&lt;/a&gt; virc 和 vimrc&lt;/h2&gt;
-&lt;p&gt;​	在 /etc/virc 和 /etc/vimrc 中永久设置样式，参数如下：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;参 数&lt;/th&gt;
-&lt;th&gt;意 义&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;：set nu：set nonu&lt;/td&gt;
-&lt;td&gt;设置行号取消行号&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：set hlsearch：set nohlsearch&lt;/td&gt;
-&lt;td&gt;将搜索到的字符高亮不设置高亮&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：set autoindent：set noautoindent&lt;/td&gt;
-&lt;td&gt;自动缩进不自动缩进&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：set backup&lt;/td&gt;
-&lt;td&gt;自动备份&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：set ruler&lt;/td&gt;
-&lt;td&gt;显示状态栏说明&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：set showmode&lt;/td&gt;
-&lt;td&gt;是否显示状态，如 --INSERT –&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：set backspace=(0 或者 1 或者 2)&lt;/td&gt;
-&lt;td&gt;按 i 进入编辑模式后，是否支持用 backspace 删除字符，0 或者 1 代表只能删除刚刚输入的字符，2 代表可以删除任意字符&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：set all&lt;/td&gt;
-&lt;td&gt;显示所有的环境变量值&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：set&lt;/td&gt;
-&lt;td&gt;显示与系统不同的环境变量值&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：syntax on：syntax off&lt;/td&gt;
-&lt;td&gt;根据程序显示颜色根据程序不显示颜色&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;：set bg=dark：set bg=light&lt;/td&gt;
-&lt;td&gt;显示不同的色调&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h2 id=&#34;vim-执行linux命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-执行linux命令&#34;&gt;#&lt;/a&gt; VIM 执行 linux 命令&lt;/h2&gt;
-&lt;p&gt;​	使用  &lt;code&gt;!command&lt;/code&gt;  可以在 vim 中执行 linux 命令。使用  &lt;code&gt;r !command&lt;/code&gt;  将 command 执行内容写入到光标位置。&lt;/p&gt;
-&lt;p&gt;🙆 &lt;strong&gt;举个例子&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;!date&lt;/strong&gt; 执行后：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528133318672.png&#34; alt=&#34;图一&#34; title=&#34;图一&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;r !date&lt;/strong&gt; 执行前：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135544960.png&#34; alt=&#34;r !date&#34;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;r !date&lt;/strong&gt; 执行后：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135634304.png&#34; alt=&#34;image-20210528135634304&#34;&gt;&lt;/p&gt;
-&lt;h2 id=&#34;其他用法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他用法&#34;&gt;#&lt;/a&gt; 其他用法&lt;/h2&gt;
-&lt;h3 id=&#34;ab-替代&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ab-替代&#34;&gt;#&lt;/a&gt; ab 替代&lt;/h3&gt;
-&lt;p&gt;​	使用  &lt;code&gt;ab string1 string2&lt;/code&gt;  代表当输入 string1 关键字的时候会用 string2 去替代。&lt;/p&gt;
-&lt;p&gt;🙆 &lt;strong&gt;举个例子&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;1. 输入 :ab passwd oracle@db。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&#34;https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528140630911.png&#34; alt=&#34;image-20210528140630911&#34;&gt;&lt;/p&gt;
-&lt;p&gt;2. 按 &lt;kbd&gt;i&lt;/kbd&gt; 进入编辑模式，然后输入 passwd ，会观察到 passwd 变为 oracle@db。&lt;/p&gt;
-&lt;h3 id=&#34;改变大小写&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#改变大小写&#34;&gt;#&lt;/a&gt; 改变大小写&lt;/h3&gt;
-&lt;p&gt;​	在普通模式下该表大小写，如表：&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;按键&lt;/th&gt;
-&lt;th&gt;作用&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;
-&lt;tr&gt;
-&lt;td&gt;~&lt;/td&gt;
-&lt;td&gt;将光标所在的字母改变大小写&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3~&lt;/td&gt;
-&lt;td&gt;将光标位置开始的三个字母改变其大小写&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;g~~&lt;/td&gt;
-&lt;td&gt;改变当前行的大小写&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3gUU&lt;/td&gt;
-&lt;td&gt;将光标开始到下面 3 行字母改成大写&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;3guu&lt;/td&gt;
-&lt;td&gt;将光标开始到下面 3 行字母改成小写&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;
-&lt;/table&gt;
-&lt;h3 id=&#34;代码补全&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#代码补全&#34;&gt;#&lt;/a&gt; 代码补全&lt;/h3&gt;
-&lt;p&gt;用 &lt;kbd&gt;ctrl+p&lt;/kbd&gt; 或者 &lt;kbd&gt;ctrl+n&lt;/kbd&gt; 可进行代码补全如图：&lt;/p&gt;
-&lt;h3 id=&#34;vim-的宏录制&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-的宏录制&#34;&gt;#&lt;/a&gt; vim 的宏录制&lt;/h3&gt;
-&lt;p&gt;用 &lt;kbd&gt;q&lt;/kbd&gt; 进行宏录制，步骤如下：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;按&lt;kbd&gt;q&lt;/kbd&gt; 开始宏录制。&lt;/li&gt;
-&lt;li&gt;按 &lt;kbd&gt;a~z&lt;/kbd&gt; 任意字母，定义寄存器名，也就是录制的宏的名字。&lt;/li&gt;
-&lt;li&gt;开始宏内容操作。&lt;/li&gt;
-&lt;li&gt;按 &lt;kbd&gt;q&lt;/kbd&gt; 结束录制。&lt;/li&gt;
-&lt;li&gt;在普通模式下使用  &lt;code&gt;@宏名 或 n@宏名&lt;/code&gt;  代表执行一次或者 n 次宏&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;🙆 &lt;strong&gt;举个例子&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;任务：将所有行首加入缩进一个制表符。&lt;/p&gt;
-&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1. 按下 q ，然后按 a ，将宏名明明为 a。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2. 按下 0 代表光标移动到行首，按下 i 进入编辑模式，按下tab键，按下 ESC 切换到普通模式。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3. 按下↓进行光标移动到下一行，宏内容录制完毕按 10@a 完成。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;h2 id=&#34;可视化模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可视化模式&#34;&gt;#&lt;/a&gt; 可视化模式&lt;/h2&gt;
-&lt;p&gt;1. 按 &lt;kbd&gt;v&lt;/kbd&gt; 进入可视化模式，光标移动可以选中或取消选中区域，按 &lt;kbd&gt;d&lt;/kbd&gt; 会删除区域，按 &lt;kbd&gt;y&lt;/kbd&gt; 复制，&lt;kbd&gt;p&lt;/kbd&gt; 粘贴。・&lt;/p&gt;
-&lt;p&gt;2. 当遇到双引号 “”，单引号‘ ’，小括号 ()，大括号 { }，中括号 [ ] 的时候，先 &lt;kbd&gt;v&lt;/kbd&gt; 进入可视化模式，然后按 &lt;kbd&gt;i&lt;/kbd&gt; 或 &lt;kbd&gt;a&lt;/kbd&gt; 然后按 &lt;kbd&gt;&amp;quot; 或 ’ 或 { 或 ( 或 [&lt;/kbd&gt; , i 代表选中符号之间的内容，a 代表连符号和内容一起选中。&lt;/p&gt;
- ]]></description>
-        </item>
-        <item>
             <guid isPermalink="true">https://li-holmes.cn/2022/06/29/vim%E5%85%A5%E9%97%A8/</guid>
             <title>vim从入门到放弃--入门篇</title>
             <link>https://li-holmes.cn/2022/06/29/vim%E5%85%A5%E9%97%A8/</link>
@@ -520,6 +388,138 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://li-holmes.cn/2022/06/29/vim%E6%94%BE%E5%BC%83/</guid>
+            <title>vim从入门到放弃--放弃篇</title>
+            <link>https://li-holmes.cn/2022/06/29/vim%E6%94%BE%E5%BC%83/</link>
+            <category>linux</category>
+            <category>vim</category>
+            <pubDate>Wed, 29 Jun 2022 16:51:00 +0800</pubDate>
+            <description><![CDATA[ &lt;p&gt;​	本文介绍了 vim 的永久设置样式，如何在 vim 中执行 linux 命令，vim 宏运用以及可视化模式。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
+&lt;h2 id=&#34;virc-和-vimrc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#virc-和-vimrc&#34;&gt;#&lt;/a&gt; virc 和 vimrc&lt;/h2&gt;
+&lt;p&gt;​	在 /etc/virc 和 /etc/vimrc 中永久设置样式，参数如下：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;参 数&lt;/th&gt;
+&lt;th&gt;意 义&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;：set nu：set nonu&lt;/td&gt;
+&lt;td&gt;设置行号取消行号&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：set hlsearch：set nohlsearch&lt;/td&gt;
+&lt;td&gt;将搜索到的字符高亮不设置高亮&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：set autoindent：set noautoindent&lt;/td&gt;
+&lt;td&gt;自动缩进不自动缩进&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：set backup&lt;/td&gt;
+&lt;td&gt;自动备份&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：set ruler&lt;/td&gt;
+&lt;td&gt;显示状态栏说明&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：set showmode&lt;/td&gt;
+&lt;td&gt;是否显示状态，如 --INSERT –&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：set backspace=(0 或者 1 或者 2)&lt;/td&gt;
+&lt;td&gt;按 i 进入编辑模式后，是否支持用 backspace 删除字符，0 或者 1 代表只能删除刚刚输入的字符，2 代表可以删除任意字符&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：set all&lt;/td&gt;
+&lt;td&gt;显示所有的环境变量值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：set&lt;/td&gt;
+&lt;td&gt;显示与系统不同的环境变量值&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：syntax on：syntax off&lt;/td&gt;
+&lt;td&gt;根据程序显示颜色根据程序不显示颜色&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;：set bg=dark：set bg=light&lt;/td&gt;
+&lt;td&gt;显示不同的色调&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h2 id=&#34;vim-执行linux命令&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-执行linux命令&#34;&gt;#&lt;/a&gt; VIM 执行 linux 命令&lt;/h2&gt;
+&lt;p&gt;​	使用  &lt;code&gt;!command&lt;/code&gt;  可以在 vim 中执行 linux 命令。使用  &lt;code&gt;r !command&lt;/code&gt;  将 command 执行内容写入到光标位置。&lt;/p&gt;
+&lt;p&gt;🙆 &lt;strong&gt;举个例子&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;!date&lt;/strong&gt; 执行后：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528133318672.png&#34; alt=&#34;图一&#34; title=&#34;图一&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;r !date&lt;/strong&gt; 执行前：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135544960.png&#34; alt=&#34;r !date&#34;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;r !date&lt;/strong&gt; 执行后：&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135634304.png&#34; alt=&#34;image-20210528135634304&#34;&gt;&lt;/p&gt;
+&lt;h2 id=&#34;其他用法&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#其他用法&#34;&gt;#&lt;/a&gt; 其他用法&lt;/h2&gt;
+&lt;h3 id=&#34;ab-替代&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#ab-替代&#34;&gt;#&lt;/a&gt; ab 替代&lt;/h3&gt;
+&lt;p&gt;​	使用  &lt;code&gt;ab string1 string2&lt;/code&gt;  代表当输入 string1 关键字的时候会用 string2 去替代。&lt;/p&gt;
+&lt;p&gt;🙆 &lt;strong&gt;举个例子&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;1. 输入 :ab passwd oracle@db。&lt;/p&gt;
+&lt;p&gt;&lt;img src=&#34;https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528140630911.png&#34; alt=&#34;image-20210528140630911&#34;&gt;&lt;/p&gt;
+&lt;p&gt;2. 按 &lt;kbd&gt;i&lt;/kbd&gt; 进入编辑模式，然后输入 passwd ，会观察到 passwd 变为 oracle@db。&lt;/p&gt;
+&lt;h3 id=&#34;改变大小写&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#改变大小写&#34;&gt;#&lt;/a&gt; 改变大小写&lt;/h3&gt;
+&lt;p&gt;​	在普通模式下该表大小写，如表：&lt;/p&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;按键&lt;/th&gt;
+&lt;th&gt;作用&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;~&lt;/td&gt;
+&lt;td&gt;将光标所在的字母改变大小写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3~&lt;/td&gt;
+&lt;td&gt;将光标位置开始的三个字母改变其大小写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;g~~&lt;/td&gt;
+&lt;td&gt;改变当前行的大小写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3gUU&lt;/td&gt;
+&lt;td&gt;将光标开始到下面 3 行字母改成大写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;3guu&lt;/td&gt;
+&lt;td&gt;将光标开始到下面 3 行字母改成小写&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;h3 id=&#34;代码补全&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#代码补全&#34;&gt;#&lt;/a&gt; 代码补全&lt;/h3&gt;
+&lt;p&gt;用 &lt;kbd&gt;ctrl+p&lt;/kbd&gt; 或者 &lt;kbd&gt;ctrl+n&lt;/kbd&gt; 可进行代码补全如图：&lt;/p&gt;
+&lt;h3 id=&#34;vim-的宏录制&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-的宏录制&#34;&gt;#&lt;/a&gt; vim 的宏录制&lt;/h3&gt;
+&lt;p&gt;用 &lt;kbd&gt;q&lt;/kbd&gt; 进行宏录制，步骤如下：&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;按&lt;kbd&gt;q&lt;/kbd&gt; 开始宏录制。&lt;/li&gt;
+&lt;li&gt;按 &lt;kbd&gt;a~z&lt;/kbd&gt; 任意字母，定义寄存器名，也就是录制的宏的名字。&lt;/li&gt;
+&lt;li&gt;开始宏内容操作。&lt;/li&gt;
+&lt;li&gt;按 &lt;kbd&gt;q&lt;/kbd&gt; 结束录制。&lt;/li&gt;
+&lt;li&gt;在普通模式下使用  &lt;code&gt;@宏名 或 n@宏名&lt;/code&gt;  代表执行一次或者 n 次宏&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;🙆 &lt;strong&gt;举个例子&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;任务：将所有行首加入缩进一个制表符。&lt;/p&gt;
+&lt;figure class=&#34;highlight bash&#34;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&#34;gutter&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&#34;code&#34;&gt;&lt;pre&gt;&lt;span class=&#34;line&#34;&gt;1. 按下 q ，然后按 a ，将宏名明明为 a。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;2. 按下 0 代表光标移动到行首，按下 i 进入编辑模式，按下tab键，按下 ESC 切换到普通模式。&lt;/span&gt;&lt;br&gt;&lt;span class=&#34;line&#34;&gt;3. 按下↓进行光标移动到下一行，宏内容录制完毕按 10@a 完成。&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;h2 id=&#34;可视化模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可视化模式&#34;&gt;#&lt;/a&gt; 可视化模式&lt;/h2&gt;
+&lt;p&gt;1. 按 &lt;kbd&gt;v&lt;/kbd&gt; 进入可视化模式，光标移动可以选中或取消选中区域，按 &lt;kbd&gt;d&lt;/kbd&gt; 会删除区域，按 &lt;kbd&gt;y&lt;/kbd&gt; 复制，&lt;kbd&gt;p&lt;/kbd&gt; 粘贴。・&lt;/p&gt;
+&lt;p&gt;2. 当遇到双引号 “”，单引号‘ ’，小括号 ()，大括号 { }，中括号 [ ] 的时候，先 &lt;kbd&gt;v&lt;/kbd&gt; 进入可视化模式，然后按 &lt;kbd&gt;i&lt;/kbd&gt; 或 &lt;kbd&gt;a&lt;/kbd&gt; 然后按 &lt;kbd&gt;&amp;quot; 或 ’ 或 { 或 ( 或 [&lt;/kbd&gt; , i 代表选中符号之间的内容，a 代表连符号和内容一起选中。&lt;/p&gt;
  ]]></description>
         </item>
     </channel>

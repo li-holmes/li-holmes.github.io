@@ -1,141 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>vim从入门到放弃--放弃篇</title>
-    <url>/2022/06/29/vim%E6%94%BE%E5%BC%83/</url>
-    <content><![CDATA[<p>​	本文介绍了 vim 的永久设置样式，如何在 vim 中执行 linux 命令，vim 宏运用以及可视化模式。</p>
-<span id="more"></span>
-<h2 id="virc-和-vimrc"><a class="markdownIt-Anchor" href="#virc-和-vimrc">#</a> virc 和 vimrc</h2>
-<p>​	在 /etc/virc 和 /etc/vimrc 中永久设置样式，参数如下：</p>
-<table>
-<thead>
-<tr>
-<th>参 数</th>
-<th>意 义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>：set nu：set nonu</td>
-<td>设置行号取消行号</td>
-</tr>
-<tr>
-<td>：set hlsearch：set nohlsearch</td>
-<td>将搜索到的字符高亮不设置高亮</td>
-</tr>
-<tr>
-<td>：set autoindent：set noautoindent</td>
-<td>自动缩进不自动缩进</td>
-</tr>
-<tr>
-<td>：set backup</td>
-<td>自动备份</td>
-</tr>
-<tr>
-<td>：set ruler</td>
-<td>显示状态栏说明</td>
-</tr>
-<tr>
-<td>：set showmode</td>
-<td>是否显示状态，如 --INSERT –</td>
-</tr>
-<tr>
-<td>：set backspace=(0 或者 1 或者 2)</td>
-<td>按 i 进入编辑模式后，是否支持用 backspace 删除字符，0 或者 1 代表只能删除刚刚输入的字符，2 代表可以删除任意字符</td>
-</tr>
-<tr>
-<td>：set all</td>
-<td>显示所有的环境变量值</td>
-</tr>
-<tr>
-<td>：set</td>
-<td>显示与系统不同的环境变量值</td>
-</tr>
-<tr>
-<td>：syntax on：syntax off</td>
-<td>根据程序显示颜色根据程序不显示颜色</td>
-</tr>
-<tr>
-<td>：set bg=dark：set bg=light</td>
-<td>显示不同的色调</td>
-</tr>
-</tbody>
-</table>
-<h2 id="vim-执行linux命令"><a class="markdownIt-Anchor" href="#vim-执行linux命令">#</a> VIM 执行 linux 命令</h2>
-<p>​	使用  <code>!command</code>  可以在 vim 中执行 linux 命令。使用  <code>r !command</code>  将 command 执行内容写入到光标位置。</p>
-<p>🙆 <strong>举个例子</strong></p>
-<p><strong>!date</strong> 执行后：</p>
-<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528133318672.png" alt="图一" title="图一"></p>
-<p><strong>r !date</strong> 执行前：</p>
-<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135544960.png" alt="r !date"></p>
-<p><strong>r !date</strong> 执行后：</p>
-<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135634304.png" alt="image-20210528135634304"></p>
-<h2 id="其他用法"><a class="markdownIt-Anchor" href="#其他用法">#</a> 其他用法</h2>
-<h3 id="ab-替代"><a class="markdownIt-Anchor" href="#ab-替代">#</a> ab 替代</h3>
-<p>​	使用  <code>ab string1 string2</code>  代表当输入 string1 关键字的时候会用 string2 去替代。</p>
-<p>🙆 <strong>举个例子</strong></p>
-<p>1. 输入 :ab passwd oracle@db。</p>
-<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528140630911.png" alt="image-20210528140630911"></p>
-<p>2. 按 <kbd>i</kbd> 进入编辑模式，然后输入 passwd ，会观察到 passwd 变为 oracle@db。</p>
-<h3 id="改变大小写"><a class="markdownIt-Anchor" href="#改变大小写">#</a> 改变大小写</h3>
-<p>​	在普通模式下该表大小写，如表：</p>
-<table>
-<thead>
-<tr>
-<th>按键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>~</td>
-<td>将光标所在的字母改变大小写</td>
-</tr>
-<tr>
-<td>3~</td>
-<td>将光标位置开始的三个字母改变其大小写</td>
-</tr>
-<tr>
-<td>g~~</td>
-<td>改变当前行的大小写</td>
-</tr>
-<tr>
-<td>3gUU</td>
-<td>将光标开始到下面 3 行字母改成大写</td>
-</tr>
-<tr>
-<td>3guu</td>
-<td>将光标开始到下面 3 行字母改成小写</td>
-</tr>
-</tbody>
-</table>
-<h3 id="代码补全"><a class="markdownIt-Anchor" href="#代码补全">#</a> 代码补全</h3>
-<p>用 <kbd>ctrl+p</kbd> 或者 <kbd>ctrl+n</kbd> 可进行代码补全如图：</p>
-<h3 id="vim-的宏录制"><a class="markdownIt-Anchor" href="#vim-的宏录制">#</a> vim 的宏录制</h3>
-<p>用 <kbd>q</kbd> 进行宏录制，步骤如下：</p>
-<ol>
-<li>按<kbd>q</kbd> 开始宏录制。</li>
-<li>按 <kbd>a~z</kbd> 任意字母，定义寄存器名，也就是录制的宏的名字。</li>
-<li>开始宏内容操作。</li>
-<li>按 <kbd>q</kbd> 结束录制。</li>
-<li>在普通模式下使用  <code>@宏名 或 n@宏名</code>  代表执行一次或者 n 次宏</li>
-</ol>
-<p>🙆 <strong>举个例子</strong></p>
-<p>任务：将所有行首加入缩进一个制表符。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. 按下 q ，然后按 a ，将宏名明明为 a。</span><br><span class="line">2. 按下 0 代表光标移动到行首，按下 i 进入编辑模式，按下tab键，按下 ESC 切换到普通模式。</span><br><span class="line">3. 按下↓进行光标移动到下一行，宏内容录制完毕按 10@a 完成。</span><br></pre></td></tr></table></figure>
-<h2 id="可视化模式"><a class="markdownIt-Anchor" href="#可视化模式">#</a> 可视化模式</h2>
-<p>1. 按 <kbd>v</kbd> 进入可视化模式，光标移动可以选中或取消选中区域，按 <kbd>d</kbd> 会删除区域，按 <kbd>y</kbd> 复制，<kbd>p</kbd> 粘贴。・</p>
-<p>2. 当遇到双引号 “”，单引号‘ ’，小括号 ()，大括号 { }，中括号 [ ] 的时候，先 <kbd>v</kbd> 进入可视化模式，然后按 <kbd>i</kbd> 或 <kbd>a</kbd> 然后按 <kbd>&quot; 或 ’ 或 { 或 ( 或 [</kbd> , i 代表选中符号之间的内容，a 代表连符号和内容一起选中。</p>
-]]></content>
-      <categories>
-        <category>linux 指南</category>
-      </categories>
-      <tags>
-        <tag>linux</tag>
-        <tag>vim</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>vim从入门到放弃--入门篇</title>
     <url>/2022/06/29/vim%E5%85%A5%E9%97%A8/</url>
     <content><![CDATA[<p>​	本文介绍了 vim 的基本光标操作，分屏操作和 vim 的三种模式，分别为：普通模式、末行模式和编辑模式。</p>
@@ -510,6 +375,141 @@
 </tr>
 </tbody>
 </table>
+]]></content>
+      <categories>
+        <category>linux 指南</category>
+      </categories>
+      <tags>
+        <tag>linux</tag>
+        <tag>vim</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>vim从入门到放弃--放弃篇</title>
+    <url>/2022/06/29/vim%E6%94%BE%E5%BC%83/</url>
+    <content><![CDATA[<p>​	本文介绍了 vim 的永久设置样式，如何在 vim 中执行 linux 命令，vim 宏运用以及可视化模式。</p>
+<span id="more"></span>
+<h2 id="virc-和-vimrc"><a class="markdownIt-Anchor" href="#virc-和-vimrc">#</a> virc 和 vimrc</h2>
+<p>​	在 /etc/virc 和 /etc/vimrc 中永久设置样式，参数如下：</p>
+<table>
+<thead>
+<tr>
+<th>参 数</th>
+<th>意 义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>：set nu：set nonu</td>
+<td>设置行号取消行号</td>
+</tr>
+<tr>
+<td>：set hlsearch：set nohlsearch</td>
+<td>将搜索到的字符高亮不设置高亮</td>
+</tr>
+<tr>
+<td>：set autoindent：set noautoindent</td>
+<td>自动缩进不自动缩进</td>
+</tr>
+<tr>
+<td>：set backup</td>
+<td>自动备份</td>
+</tr>
+<tr>
+<td>：set ruler</td>
+<td>显示状态栏说明</td>
+</tr>
+<tr>
+<td>：set showmode</td>
+<td>是否显示状态，如 --INSERT –</td>
+</tr>
+<tr>
+<td>：set backspace=(0 或者 1 或者 2)</td>
+<td>按 i 进入编辑模式后，是否支持用 backspace 删除字符，0 或者 1 代表只能删除刚刚输入的字符，2 代表可以删除任意字符</td>
+</tr>
+<tr>
+<td>：set all</td>
+<td>显示所有的环境变量值</td>
+</tr>
+<tr>
+<td>：set</td>
+<td>显示与系统不同的环境变量值</td>
+</tr>
+<tr>
+<td>：syntax on：syntax off</td>
+<td>根据程序显示颜色根据程序不显示颜色</td>
+</tr>
+<tr>
+<td>：set bg=dark：set bg=light</td>
+<td>显示不同的色调</td>
+</tr>
+</tbody>
+</table>
+<h2 id="vim-执行linux命令"><a class="markdownIt-Anchor" href="#vim-执行linux命令">#</a> VIM 执行 linux 命令</h2>
+<p>​	使用  <code>!command</code>  可以在 vim 中执行 linux 命令。使用  <code>r !command</code>  将 command 执行内容写入到光标位置。</p>
+<p>🙆 <strong>举个例子</strong></p>
+<p><strong>!date</strong> 执行后：</p>
+<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528133318672.png" alt="图一" title="图一"></p>
+<p><strong>r !date</strong> 执行前：</p>
+<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135544960.png" alt="r !date"></p>
+<p><strong>r !date</strong> 执行后：</p>
+<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135634304.png" alt="image-20210528135634304"></p>
+<h2 id="其他用法"><a class="markdownIt-Anchor" href="#其他用法">#</a> 其他用法</h2>
+<h3 id="ab-替代"><a class="markdownIt-Anchor" href="#ab-替代">#</a> ab 替代</h3>
+<p>​	使用  <code>ab string1 string2</code>  代表当输入 string1 关键字的时候会用 string2 去替代。</p>
+<p>🙆 <strong>举个例子</strong></p>
+<p>1. 输入 :ab passwd oracle@db。</p>
+<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528140630911.png" alt="image-20210528140630911"></p>
+<p>2. 按 <kbd>i</kbd> 进入编辑模式，然后输入 passwd ，会观察到 passwd 变为 oracle@db。</p>
+<h3 id="改变大小写"><a class="markdownIt-Anchor" href="#改变大小写">#</a> 改变大小写</h3>
+<p>​	在普通模式下该表大小写，如表：</p>
+<table>
+<thead>
+<tr>
+<th>按键</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>~</td>
+<td>将光标所在的字母改变大小写</td>
+</tr>
+<tr>
+<td>3~</td>
+<td>将光标位置开始的三个字母改变其大小写</td>
+</tr>
+<tr>
+<td>g~~</td>
+<td>改变当前行的大小写</td>
+</tr>
+<tr>
+<td>3gUU</td>
+<td>将光标开始到下面 3 行字母改成大写</td>
+</tr>
+<tr>
+<td>3guu</td>
+<td>将光标开始到下面 3 行字母改成小写</td>
+</tr>
+</tbody>
+</table>
+<h3 id="代码补全"><a class="markdownIt-Anchor" href="#代码补全">#</a> 代码补全</h3>
+<p>用 <kbd>ctrl+p</kbd> 或者 <kbd>ctrl+n</kbd> 可进行代码补全如图：</p>
+<h3 id="vim-的宏录制"><a class="markdownIt-Anchor" href="#vim-的宏录制">#</a> vim 的宏录制</h3>
+<p>用 <kbd>q</kbd> 进行宏录制，步骤如下：</p>
+<ol>
+<li>按<kbd>q</kbd> 开始宏录制。</li>
+<li>按 <kbd>a~z</kbd> 任意字母，定义寄存器名，也就是录制的宏的名字。</li>
+<li>开始宏内容操作。</li>
+<li>按 <kbd>q</kbd> 结束录制。</li>
+<li>在普通模式下使用  <code>@宏名 或 n@宏名</code>  代表执行一次或者 n 次宏</li>
+</ol>
+<p>🙆 <strong>举个例子</strong></p>
+<p>任务：将所有行首加入缩进一个制表符。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">1. 按下 q ，然后按 a ，将宏名明明为 a。</span><br><span class="line">2. 按下 0 代表光标移动到行首，按下 i 进入编辑模式，按下tab键，按下 ESC 切换到普通模式。</span><br><span class="line">3. 按下↓进行光标移动到下一行，宏内容录制完毕按 10@a 完成。</span><br></pre></td></tr></table></figure>
+<h2 id="可视化模式"><a class="markdownIt-Anchor" href="#可视化模式">#</a> 可视化模式</h2>
+<p>1. 按 <kbd>v</kbd> 进入可视化模式，光标移动可以选中或取消选中区域，按 <kbd>d</kbd> 会删除区域，按 <kbd>y</kbd> 复制，<kbd>p</kbd> 粘贴。・</p>
+<p>2. 当遇到双引号 “”，单引号‘ ’，小括号 ()，大括号 { }，中括号 [ ] 的时候，先 <kbd>v</kbd> 进入可视化模式，然后按 <kbd>i</kbd> 或 <kbd>a</kbd> 然后按 <kbd>&quot; 或 ’ 或 { 或 ( 或 [</kbd> , i 代表选中符号之间的内容，a 代表连符号和内容一起选中。</p>
 ]]></content>
       <categories>
         <category>linux 指南</category>
