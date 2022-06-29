@@ -3,7 +3,8 @@
   <entry>
     <title>vim从入门到放弃--放弃篇</title>
     <url>/2022/06/29/vim%E6%94%BE%E5%BC%83/</url>
-    <content><![CDATA[<h1 id="vim-放弃"><a class="markdownIt-Anchor" href="#vim-放弃">#</a> vim 放弃</h1>
+    <content><![CDATA[<p>​	本文介绍了 vim 的永久设置样式，如何在 vim 中执行 linux 命令，vim 宏运用以及可视化模式。</p>
+<span id="more"></span>
 <h2 id="virc-和-vimrc"><a class="markdownIt-Anchor" href="#virc-和-vimrc">#</a> virc 和 vimrc</h2>
 <p>​	在 /etc/virc 和 /etc/vimrc 中永久设置样式，参数如下：</p>
 <table>
@@ -137,7 +138,8 @@
   <entry>
     <title>vim从入门到放弃--入门篇</title>
     <url>/2022/06/29/vim%E5%85%A5%E9%97%A8/</url>
-    <content><![CDATA[<h1 id="vim-入门"><a class="markdownIt-Anchor" href="#vim-入门">#</a> vim 入门</h1>
+    <content><![CDATA[<p>​	本文介绍了 vim 的基本光标操作，分屏操作和 vim 的三种模式，分别为：普通模式、末行模式和编辑模式。</p>
+<span id="more"></span>
 <h2 id="简介"><a class="markdownIt-Anchor" href="#简介">#</a> 简介</h2>
 <p>​	vim 主要分为三种模式：<strong>普通模式</strong>、<strong>末行模式</strong>和<strong>编辑模式</strong>，使用  <code>vimtutor</code>  打开 vim 教程，使用  <code>:version</code>  可以查看 vim 版本信息及启动时调用的文件配置。</p>
 <p>​	按下 <kbd>a</kbd> 或者 <kbd>i</kbd> 进入编辑模式，按下<kbd>:</kbd>进入末行模式，按下<kbd>ESC</kbd>进入普通模式。</p>

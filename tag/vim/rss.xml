@@ -16,7 +16,8 @@
             <category>linux</category>
             <category>vim</category>
             <pubDate>Wed, 29 Jun 2022 16:51:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;vim-放弃&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-放弃&#34;&gt;#&lt;/a&gt; vim 放弃&lt;/h1&gt;
+            <description><![CDATA[ &lt;p&gt;​	本文介绍了 vim 的永久设置样式，如何在 vim 中执行 linux 命令，vim 宏运用以及可视化模式。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 &lt;h2 id=&#34;virc-和-vimrc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#virc-和-vimrc&#34;&gt;#&lt;/a&gt; virc 和 vimrc&lt;/h2&gt;
 &lt;p&gt;​	在 /etc/virc 和 /etc/vimrc 中永久设置样式，参数如下：&lt;/p&gt;
 &lt;table&gt;
@@ -147,7 +148,8 @@
             <category>linux</category>
             <category>vim</category>
             <pubDate>Wed, 29 Jun 2022 16:51:00 +0800</pubDate>
-            <description><![CDATA[ &lt;h1 id=&#34;vim-入门&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-入门&#34;&gt;#&lt;/a&gt; vim 入门&lt;/h1&gt;
+            <description><![CDATA[ &lt;p&gt;​	本文介绍了 vim 的基本光标操作，分屏操作和 vim 的三种模式，分别为：普通模式、末行模式和编辑模式。&lt;/p&gt;
+&lt;span id=&#34;more&#34;&gt;&lt;/span&gt;
 &lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
 &lt;p&gt;​	vim 主要分为三种模式：&lt;strong&gt;普通模式&lt;/strong&gt;、&lt;strong&gt;末行模式&lt;/strong&gt;和&lt;strong&gt;编辑模式&lt;/strong&gt;，使用  &lt;code&gt;vimtutor&lt;/code&gt;  打开 vim 教程，使用  &lt;code&gt;:version&lt;/code&gt;  可以查看 vim 版本信息及启动时调用的文件配置。&lt;/p&gt;
 &lt;p&gt;​	按下 &lt;kbd&gt;a&lt;/kbd&gt; 或者 &lt;kbd&gt;i&lt;/kbd&gt; 进入编辑模式，按下&lt;kbd&gt;:&lt;/kbd&gt;进入末行模式，按下&lt;kbd&gt;ESC&lt;/kbd&gt;进入普通模式。&lt;/p&gt;
