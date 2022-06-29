@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://li-holmes.cn</id>
-    <title>li-holmes</title>
+    <title>li-holmes • Posts by &#34;linux 指南&#34; category</title>
     <link href="https://li-holmes.cn" />
     <updated>2022-06-29T08:51:00.000Z</updated>
     <category term="linux" />

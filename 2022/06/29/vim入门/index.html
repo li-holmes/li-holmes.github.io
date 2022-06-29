@@ -20,28 +20,41 @@
     var CONFIG = {"hostname":"li-holmes.cn","root":"/","scheme":"Gemini","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"manual","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="li-holmes">
-<meta property="og:url" content="https://li-holmes.cn/index.html">
+  <meta name="description" content="# vim 入门 # 简介 ​	vim 主要分为三种模式：普通模式、末行模式和编辑模式，使用  vimtutor  打开 vim 教程，使用  :version  可以查看 vim 版本信息及启动时调用的文件配置。 ​	按下 a 或者 i 进入编辑模式，按下:进入末行模式，按下ESC进入普通模式。 1234567891011121314151617181920Title:vim 三种模式切换图编辑">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vim从入门到放弃--入门篇">
+<meta property="og:url" content="https://li-holmes.cn/2022/06/29/vim%E5%85%A5%E9%97%A8/index.html">
 <meta property="og:site_name" content="li-holmes">
+<meta property="og:description" content="# vim 入门 # 简介 ​	vim 主要分为三种模式：普通模式、末行模式和编辑模式，使用  vimtutor  打开 vim 教程，使用  :version  可以查看 vim 版本信息及启动时调用的文件配置。 ​	按下 a 或者 i 进入编辑模式，按下:进入末行模式，按下ESC进入普通模式。 1234567891011121314151617181920Title:vim 三种模式切换图编辑">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210524135052527.png">
+<meta property="og:image" content="c:%5CUsers%5Clizy25148%5CAppData%5CRoaming%5CTypora%5Ctypora-user-images%5Cimage-20210524135333673.png">
+<meta property="og:image" content="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210524140051259.png">
+<meta property="og:image" content="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210524142722813.png">
+<meta property="og:image" content="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210525095911758.png">
+<meta property="og:image" content="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210525101918146.png">
+<meta property="article:published_time" content="2022-06-29T08:51:00.000Z">
+<meta property="article:modified_time" content="2022-06-29T08:52:38.146Z">
 <meta property="article:author" content="li-holmes">
+<meta property="article:tag" content="linux">
+<meta property="article:tag" content="vim">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210524135052527.png">
 
-<link rel="canonical" href="https://li-holmes.cn/">
+<link rel="canonical" href="https://li-holmes.cn/2022/06/29/vim%E5%85%A5%E9%97%A8/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>li-holmes</title>
+  <title>vim从入门到放弃--入门篇 | li-holmes</title>
   
 
 
@@ -182,213 +195,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://li-holmes.cn/2022/06/29/vim%E6%94%BE%E5%BC%83/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="https://s2.loli.net/2022/06/29/zvPLxObATM3dfn7.jpg">
-      <meta itemprop="name" content="li-holmes">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="li-holmes">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/29/vim%E6%94%BE%E5%BC%83/" class="post-title-link" itemprop="url">vim从入门到放弃--放弃篇</a>
-        </h2>
-
-        <div class="post-meta">
-        
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2022-06-29 16:51:00 / 修改时间：16:53:19" itemprop="dateCreated datePublished" datetime="2022-06-29T16:51:00+08:00">2022-06-29</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/linux-%E6%8C%87%E5%8D%97/" itemprop="url" rel="index"><span itemprop="name">linux 指南</span></a>
-                </span>
-            </span>
-
-          <br>
-            <span class="post-meta-item" title="本文字数">
-              <span class="post-meta-item-icon">
-                <i class="far fa-file-word"></i>
-              </span>
-                <span class="post-meta-item-text">本文字数：</span>
-              <span>1.2k</span>
-            </span>
-            <span class="post-meta-item" title="阅读时长">
-              <span class="post-meta-item-icon">
-                <i class="far fa-clock"></i>
-              </span>
-                <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
-            </span>
-
-        </div>
-      </header>
 
     
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="vim-放弃"><a class="markdownIt-Anchor" href="#vim-放弃">#</a> vim 放弃</h1>
-<h2 id="virc-和-vimrc"><a class="markdownIt-Anchor" href="#virc-和-vimrc">#</a> virc 和 vimrc</h2>
-<p>​	在 /etc/virc 和 /etc/vimrc 中永久设置样式，参数如下：</p>
-<table>
-<thead>
-<tr>
-<th>参 数</th>
-<th>意 义</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>：set nu：set nonu</td>
-<td>设置行号取消行号</td>
-</tr>
-<tr>
-<td>：set hlsearch：set nohlsearch</td>
-<td>将搜索到的字符高亮不设置高亮</td>
-</tr>
-<tr>
-<td>：set autoindent：set noautoindent</td>
-<td>自动缩进不自动缩进</td>
-</tr>
-<tr>
-<td>：set backup</td>
-<td>自动备份</td>
-</tr>
-<tr>
-<td>：set ruler</td>
-<td>显示状态栏说明</td>
-</tr>
-<tr>
-<td>：set showmode</td>
-<td>是否显示状态，如 --INSERT –</td>
-</tr>
-<tr>
-<td>：set backspace=(0 或者 1 或者 2)</td>
-<td>按 i 进入编辑模式后，是否支持用 backspace 删除字符，0 或者 1 代表只能删除刚刚输入的字符，2 代表可以删除任意字符</td>
-</tr>
-<tr>
-<td>：set all</td>
-<td>显示所有的环境变量值</td>
-</tr>
-<tr>
-<td>：set</td>
-<td>显示与系统不同的环境变量值</td>
-</tr>
-<tr>
-<td>：syntax on：syntax off</td>
-<td>根据程序显示颜色根据程序不显示颜色</td>
-</tr>
-<tr>
-<td>：set bg=dark：set bg=light</td>
-<td>显示不同的色调</td>
-</tr>
-</tbody>
-</table>
-<h2 id="vim-执行linux命令"><a class="markdownIt-Anchor" href="#vim-执行linux命令">#</a> VIM 执行 linux 命令</h2>
-<p>​	使用  <code>!command</code>  可以在 vim 中执行 linux 命令。使用  <code>r !command</code>  将 command 执行内容写入到光标位置。</p>
-<p>🙆 <strong>举个例子</strong></p>
-<p><strong>!date</strong> 执行后：</p>
-<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528133318672.png" alt="图一" title="图一"></p>
-<p><strong>r !date</strong> 执行前：</p>
-<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135544960.png" alt="r !date"></p>
-<p><strong>r !date</strong> 执行后：</p>
-<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528135634304.png" alt="image-20210528135634304"></p>
-<h2 id="其他用法"><a class="markdownIt-Anchor" href="#其他用法">#</a> 其他用法</h2>
-<h3 id="ab-替代"><a class="markdownIt-Anchor" href="#ab-替代">#</a> ab 替代</h3>
-<p>​	使用  <code>ab string1 string2</code>  代表当输入 string1 关键字的时候会用 string2 去替代。</p>
-<p>🙆 <strong>举个例子</strong></p>
-<p>1. 输入 :ab passwd oracle@db。</p>
-<p><img src="https://gitee.com/holmessherlock_cat/img-gitee/raw/master/image-20210528140630911.png" alt="image-20210528140630911"></p>
-<p>2. 按 <kbd>i</kbd> 进入编辑模式，然后输入 passwd ，会观察到 passwd 变为 oracle@db。</p>
-<h3 id="改变大小写"><a class="markdownIt-Anchor" href="#改变大小写">#</a> 改变大小写</h3>
-<p>​	在普通模式下该表大小写，如表：</p>
-<table>
-<thead>
-<tr>
-<th>按键</th>
-<th>作用</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>~</td>
-<td>将光标所在的字母改变大小写</td>
-</tr>
-<tr>
-<td>3~</td>
-<td>将光标位置开始的三个字母改变其大小写</td>
-</tr>
-<tr>
-<td>g~~</td>
-<td>改变当前行的大小写</td>
-</tr>
-<tr>
-<td>3gUU</td>
-<td>将光标开始到下面 3 行字母改成大写</td>
-</tr>
-<tr>
-<td>3guu</td>
-<td>将光标开始到下面 3 行字母改成小写</td>
-</tr>
-</tbody>
-</table>
-<h3 id="代码补全"><a class="markdownIt-Anchor" href="#代码补全">#</a> 代码补全</h3>
-<p>用 <kbd>ctrl+p</kbd> 或者 <kbd>ctrl+n</kbd> 可进行代码补全如图：</p>
-<h3 id="vim-的宏录制"><a class="markdownIt-Anchor" href="#vim-的宏录制">#</a> vim 的宏录制</h3>
-<p>用 <kbd>q</kbd> 进行宏录制，步骤如下：</p>
-<ol>
-<li>按<kbd>q</kbd> 开始宏录制。</li>
-<li>按 <kbd>a~z</kbd> 任意字母，定义寄存器名，也就是录制的宏的名字。</li>
-<li>开始宏内容操作。</li>
-<li>按 <kbd>q</kbd> 结束录制。</li>
-<li>在普通模式下使用  <code>@宏名 或 n@宏名</code>  代表执行一次或者 n 次宏</li>
-</ol>
-<p>🙆 <strong>举个例子</strong></p>
-<p>任务：将所有行首加入缩进一个制表符。</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1. 按下 q ，然后按 a ，将宏名明明为 a。</span><br><span class="line">2. 按下 0 代表光标移动到行首，按下 i 进入编辑模式，按下tab键，按下 ESC 切换到普通模式。</span><br><span class="line">3. 按下↓进行光标移动到下一行，宏内容录制完毕按 10@a 完成。</span><br></pre></td></tr></table></figure>
-<h2 id="可视化模式"><a class="markdownIt-Anchor" href="#可视化模式">#</a> 可视化模式</h2>
-<p>1. 按 <kbd>v</kbd> 进入可视化模式，光标移动可以选中或取消选中区域，按 <kbd>d</kbd> 会删除区域，按 <kbd>y</kbd> 复制，<kbd>p</kbd> 粘贴。・</p>
-<p>2. 当遇到双引号 “”，单引号‘ ’，小括号 ()，大括号 { }，中括号 [ ] 的时候，先 <kbd>v</kbd> 进入可视化模式，然后按 <kbd>i</kbd> 或 <kbd>a</kbd> 然后按 <kbd>&quot; 或 ’ 或 { 或 ( 或 [</kbd> , i 代表选中符号之间的内容，a 代表连符号和内容一起选中。</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -404,10 +214,9 @@
       <meta itemprop="name" content="li-holmes">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2022/06/29/vim%E5%85%A5%E9%97%A8/" class="post-title-link" itemprop="url">vim从入门到放弃--入门篇</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          vim从入门到放弃--入门篇
+        </h1>
 
         <div class="post-meta">
         
@@ -455,7 +264,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <h1 id="vim-入门"><a class="markdownIt-Anchor" href="#vim-入门">#</a> vim 入门</h1>
+        <h1 id="vim-入门"><a class="markdownIt-Anchor" href="#vim-入门">#</a> vim 入门</h1>
 <h2 id="简介"><a class="markdownIt-Anchor" href="#简介">#</a> 简介</h2>
 <p>​	vim 主要分为三种模式：<strong>普通模式</strong>、<strong>末行模式</strong>和<strong>编辑模式</strong>，使用  <code>vimtutor</code>  打开 vim 教程，使用  <code>:version</code>  可以查看 vim 版本信息及启动时调用的文件配置。</p>
 <p>​	按下 <kbd>a</kbd> 或者 <kbd>i</kbd> 进入编辑模式，按下<kbd>:</kbd>进入末行模式，按下<kbd>ESC</kbd>进入普通模式。</p>
@@ -827,21 +636,34 @@
 </tbody>
 </table>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
+          <div class="post-tags">
+              <a href="/tags/linux/" rel="tag"># linux</a>
+              <a href="/tags/vim/" rel="tag"># vim</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2022/06/29/vim%E6%94%BE%E5%BC%83/" rel="next" title="vim从入门到放弃--放弃篇">
+      vim从入门到放弃--放弃篇 <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
       </footer>
+    
   </article>
   
   
-  
-
-
   
 
 
@@ -894,6 +716,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#vim-%E5%85%A5%E9%97%A8"><span class="nav-number">1.</span> <span class="nav-text"> vim 入门</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AE%80%E4%BB%8B"><span class="nav-number">1.1.</span> <span class="nav-text"> 简介</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E7%A7%8D%E7%A7%BB%E5%8A%A8%E5%88%B0%E6%9C%80%E5%90%8E%E4%B8%80%E8%A1%8C"><span class="nav-number">1.1.1.</span> <span class="nav-text"> 第二种：移动到最后一行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%B8%89%E7%A7%8D%E5%85%89%E6%A0%87%E5%9C%A8%E9%A6%96%E8%A1%8C%E6%89%93%E5%BC%80"><span class="nav-number">1.1.2.</span> <span class="nav-text"> 第三种：光标在首行打开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%9B%9B%E7%A7%8D%E5%85%89%E6%A0%87%E5%9C%A8%E9%A6%96%E6%AC%A1%E6%A8%A1%E5%BC%8F%E5%8C%B9%E9%85%8D%E8%A1%8C"><span class="nav-number">1.1.3.</span> <span class="nav-text"> 第四种：光标在首次模式匹配行</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E4%BA%94%E7%A7%8D%E5%A4%9A%E6%96%87%E6%9C%AC%E6%89%93%E5%BC%80"><span class="nav-number">1.1.4.</span> <span class="nav-text"> 第五种：多文本打开</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%AC%AC%E5%85%AD%E7%A7%8D%E5%88%86%E5%B1%8F%E6%93%8D%E4%BD%9C"><span class="nav-number">1.1.5.</span> <span class="nav-text"> 第六种：分屏操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%BC%96%E8%BE%91%E6%96%87%E6%9C%AC"><span class="nav-number">1.2.</span> <span class="nav-text"> 编辑文本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%99%AE%E9%80%9A%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.3.</span> <span class="nav-text"> 普通模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%89%E6%A0%87%E7%A7%BB%E5%8A%A8"><span class="nav-number">1.3.1.</span> <span class="nav-text"> 光标移动</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%90%9C%E7%B4%A2%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.2.</span> <span class="nav-text"> 搜索操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%88%A0%E9%99%A4%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.3.</span> <span class="nav-text"> 删除操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%A4%8D%E5%88%B6%E7%B2%98%E8%B4%B4"><span class="nav-number">1.3.4.</span> <span class="nav-text"> 复制粘贴</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%85%B6%E4%BB%96%E6%93%8D%E4%BD%9C"><span class="nav-number">1.3.5.</span> <span class="nav-text"> 其他操作</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%9C%AB%E8%A1%8C%E6%A8%A1%E5%BC%8F"><span class="nav-number">1.4.</span> <span class="nav-text"> 末行模式</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 

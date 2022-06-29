@@ -1,16 +1,22 @@
 <?xml version="1.0"?>
-<feed xmlns="http://www.w3.org/2005/Atom">
-    <id>https://li-holmes.cn</id>
-    <title>li-holmes</title>
-    <link href="https://li-holmes.cn" />
-    <updated>2022-06-29T08:51:00.000Z</updated>
-    <category term="linux" />
-    <category term="vim" />
-    <entry>
-        <id>https://li-holmes.cn/2022/06/29/vim%E6%94%BE%E5%BC%83/</id>
-        <title>vim从入门到放弃--放弃篇</title>
-        <link rel="alternate" href="https://li-holmes.cn/2022/06/29/vim%E6%94%BE%E5%BC%83/"/>
-        <content type="html">&lt;h1 id=&#34;vim-放弃&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-放弃&#34;&gt;#&lt;/a&gt; vim 放弃&lt;/h1&gt;
+<rss version="2.0">
+    <channel>
+        <title>li-holmes • Posts by &#34;linux&#34; tag</title>
+        <link>https://li-holmes.cn</link>
+        <description></description>
+        <language>zh-CN</language>
+        <pubDate>Wed, 29 Jun 2022 16:51:00 +0800</pubDate>
+        <lastBuildDate>Wed, 29 Jun 2022 16:51:00 +0800</lastBuildDate>
+        <category>linux</category>
+        <category>vim</category>
+        <item>
+            <guid isPermalink="true">https://li-holmes.cn/2022/06/29/vim%E6%94%BE%E5%BC%83/</guid>
+            <title>vim从入门到放弃--放弃篇</title>
+            <link>https://li-holmes.cn/2022/06/29/vim%E6%94%BE%E5%BC%83/</link>
+            <category>linux</category>
+            <category>vim</category>
+            <pubDate>Wed, 29 Jun 2022 16:51:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;vim-放弃&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-放弃&#34;&gt;#&lt;/a&gt; vim 放弃&lt;/h1&gt;
 &lt;h2 id=&#34;virc-和-vimrc&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#virc-和-vimrc&#34;&gt;#&lt;/a&gt; virc 和 vimrc&lt;/h2&gt;
 &lt;p&gt;​	在 /etc/virc 和 /etc/vimrc 中永久设置样式，参数如下：&lt;/p&gt;
 &lt;table&gt;
@@ -132,16 +138,16 @@
 &lt;h2 id=&#34;可视化模式&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#可视化模式&#34;&gt;#&lt;/a&gt; 可视化模式&lt;/h2&gt;
 &lt;p&gt;1. 按 &lt;kbd&gt;v&lt;/kbd&gt; 进入可视化模式，光标移动可以选中或取消选中区域，按 &lt;kbd&gt;d&lt;/kbd&gt; 会删除区域，按 &lt;kbd&gt;y&lt;/kbd&gt; 复制，&lt;kbd&gt;p&lt;/kbd&gt; 粘贴。・&lt;/p&gt;
 &lt;p&gt;2. 当遇到双引号 “”，单引号‘ ’，小括号 ()，大括号 { }，中括号 [ ] 的时候，先 &lt;kbd&gt;v&lt;/kbd&gt; 进入可视化模式，然后按 &lt;kbd&gt;i&lt;/kbd&gt; 或 &lt;kbd&gt;a&lt;/kbd&gt; 然后按 &lt;kbd&gt;&amp;quot; 或 ’ 或 { 或 ( 或 [&lt;/kbd&gt; , i 代表选中符号之间的内容，a 代表连符号和内容一起选中。&lt;/p&gt;
-</content>
-        <category term="linux" />
-        <category term="vim" />
-        <updated>2022-06-29T08:51:00.000Z</updated>
-    </entry>
-    <entry>
-        <id>https://li-holmes.cn/2022/06/29/vim%E5%85%A5%E9%97%A8/</id>
-        <title>vim从入门到放弃--入门篇</title>
-        <link rel="alternate" href="https://li-holmes.cn/2022/06/29/vim%E5%85%A5%E9%97%A8/"/>
-        <content type="html">&lt;h1 id=&#34;vim-入门&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-入门&#34;&gt;#&lt;/a&gt; vim 入门&lt;/h1&gt;
+ ]]></description>
+        </item>
+        <item>
+            <guid isPermalink="true">https://li-holmes.cn/2022/06/29/vim%E5%85%A5%E9%97%A8/</guid>
+            <title>vim从入门到放弃--入门篇</title>
+            <link>https://li-holmes.cn/2022/06/29/vim%E5%85%A5%E9%97%A8/</link>
+            <category>linux</category>
+            <category>vim</category>
+            <pubDate>Wed, 29 Jun 2022 16:51:00 +0800</pubDate>
+            <description><![CDATA[ &lt;h1 id=&#34;vim-入门&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#vim-入门&#34;&gt;#&lt;/a&gt; vim 入门&lt;/h1&gt;
 &lt;h2 id=&#34;简介&#34;&gt;&lt;a class=&#34;markdownIt-Anchor&#34; href=&#34;#简介&#34;&gt;#&lt;/a&gt; 简介&lt;/h2&gt;
 &lt;p&gt;​	vim 主要分为三种模式：&lt;strong&gt;普通模式&lt;/strong&gt;、&lt;strong&gt;末行模式&lt;/strong&gt;和&lt;strong&gt;编辑模式&lt;/strong&gt;，使用  &lt;code&gt;vimtutor&lt;/code&gt;  打开 vim 教程，使用  &lt;code&gt;:version&lt;/code&gt;  可以查看 vim 版本信息及启动时调用的文件配置。&lt;/p&gt;
 &lt;p&gt;​	按下 &lt;kbd&gt;a&lt;/kbd&gt; 或者 &lt;kbd&gt;i&lt;/kbd&gt; 进入编辑模式，按下&lt;kbd&gt;:&lt;/kbd&gt;进入末行模式，按下&lt;kbd&gt;ESC&lt;/kbd&gt;进入普通模式。&lt;/p&gt;
@@ -512,9 +518,7 @@
 &lt;/tr&gt;
 &lt;/tbody&gt;
 &lt;/table&gt;
-</content>
-        <category term="linux" />
-        <category term="vim" />
-        <updated>2022-06-29T08:51:00.000Z</updated>
-    </entry>
-</feed>
+ ]]></description>
+        </item>
+    </channel>
+</rss>
